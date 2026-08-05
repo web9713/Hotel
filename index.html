@@ -2,47 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BCA HOTEL | Luxury Stay</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>BCA HOTEL | Luxury Stay</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
 
-<!-- Header -->
+<!-- HEADER -->
+
 <header class="header">
 
 <nav class="navbar">
 
-    <div class="logo">
-        BCA HOTEL
-    </div>
+<div class="logo">
+BCA HOTEL
+</div>
 
 
-    <ul class="nav-links" id="navLinks">
+<ul class="nav-links" id="navLinks">
 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#rooms">Rooms</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#facilities">Facilities</a></li>
-        <li><a href="#contact">Contact</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#rooms">Rooms</a></li>
+<li><a href="#restaurant">Restaurant</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#contact">Contact</a></li>
 
-    </ul>
-
-
-    <button id="menuBtn" class="menu-btn">
-        ☰
-    </button>
+</ul>
 
 
-    <a href="#contact" class="book-btn">
-        Book Now
-    </a>
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+
+<a href="#booking" class="book-btn">
+Book Now
+</a>
 
 
 </nav>
@@ -53,69 +58,84 @@
 
 
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section class="hero" id="home">
+
 
 <div class="hero-overlay"></div>
 
 
-<div class="hero-content">
+<div class="hero-content animate">
 
 <h1>
-BCA HOTEL
+Welcome To BCA HOTEL
 </h1>
 
+
 <p>
-Luxury rooms, delicious food and premium hospitality.
+Experience luxury, comfort and unforgettable hospitality.
 </p>
 
 
-<a href="#rooms" class="primary-btn">
-Explore Rooms
+<a href="#booking" class="primary-btn">
+Reserve Your Stay
 </a>
 
 
 </div>
 
+
 </section>
 
 
 
 
 
-<!-- About -->
 
-<section class="about section">
+
+<!-- ABOUT -->
+
+
+<section class="about section reveal" id="about">
+
 
 <div class="container">
 
+
 <h2>
-Welcome To BCA HOTEL
+About BCA HOTEL
 </h2>
 
+
 <p>
-Experience comfort and luxury with our modern rooms,
-restaurant and excellent services.
+BCA HOTEL provides premium rooms, delicious dining,
+modern facilities and excellent hospitality for every guest.
 </p>
+
 
 </div>
 
+
 </section>
 
 
 
 
 
-<!-- Rooms -->
+
+
+<!-- ROOMS -->
+
 
 <section class="rooms section" id="rooms">
+
 
 <div class="container">
 
 
-<h2 class="section-title">
-Our Rooms
+<h2 class="section-title reveal">
+Our Luxury Rooms
 </h2>
 
 
@@ -123,73 +143,106 @@ Our Rooms
 
 
 
-<div class="room-card">
+<div class="room-card reveal">
+
 
 <img src="images/room1.png" alt="Deluxe Room">
 
-<div class="room-info">
+
+<div class="room-content">
 
 <h3>
 Deluxe Room
 </h3>
 
 <p>
-Beautiful and comfortable stay.
+Comfortable room with AC, WiFi and modern facilities.
 </p>
 
+
+<button class="room-btn">
+View Details
+</button>
+
+
 </div>
 
+
 </div>
 
 
 
 
 
-<div class="room-card">
+
+<div class="room-card reveal">
+
 
 <img src="images/room2.png" alt="Luxury Suite">
 
-<div class="room-info">
+
+<div class="room-content">
 
 <h3>
 Luxury Suite
 </h3>
 
 <p>
-Premium room with elegant design.
+Premium suite with elegant interior design.
 </p>
 
+
+<button class="room-btn">
+View Details
+</button>
+
+
 </div>
 
+
 </div>
 
 
 
 
 
-<div class="room-card">
+
+
+<div class="room-card reveal">
+
 
 <img src="images/hotel.png" alt="Family Room">
 
-<div class="room-info">
+
+<div class="room-content">
 
 <h3>
 Family Room
 </h3>
 
 <p>
-Spacious room for families.
+Spacious room perfect for family stay.
 </p>
 
-</div>
+
+<button class="room-btn">
+View Details
+</button>
+
 
 </div>
 
 
+</div>
+
+
+
 
 </div>
 
+
 </div>
+
 
 </section>
 
@@ -198,7 +251,60 @@ Spacious room for families.
 
 
 
-<!-- Gallery -->
+
+
+<!-- RESTAURANT -->
+
+
+<section class="restaurant section" id="restaurant">
+
+
+<div class="container restaurant-box">
+
+
+<div class="restaurant-image reveal">
+
+<img src="images/restaurant.png" alt="Restaurant">
+
+</div>
+
+
+
+<div class="restaurant-text reveal">
+
+
+<h2>
+Fine Dining Experience
+</h2>
+
+
+<p>
+Enjoy delicious cuisine prepared by expert chefs
+with a premium dining atmosphere.
+</p>
+
+
+<a href="#booking" class="primary-btn">
+Book Table
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- GALLERY -->
+
 
 <section class="gallery section" id="gallery">
 
@@ -206,7 +312,7 @@ Spacious room for families.
 <div class="container">
 
 
-<h2 class="section-title">
+<h2 class="section-title reveal">
 Hotel Gallery
 </h2>
 
@@ -215,14 +321,13 @@ Hotel Gallery
 <div class="gallery-grid">
 
 
-<img src="images/hero.png" alt="Hotel">
+<img class="reveal" src="images/hero.png">
 
-<img src="images/restaurant.png" alt="Restaurant">
+<img class="reveal" src="images/lobby.png">
 
-<img src="images/lobby.png" alt="Lobby">
+<img class="reveal" src="images/restaurant.png">
 
-<img src="images/hotel.png" alt="Hotel">
-
+<img class="reveal" src="images/hotel.png">
 
 
 </div>
@@ -239,39 +344,41 @@ Hotel Gallery
 
 
 
-<!-- Facilities -->
+
+<!-- FACILITIES -->
 
 
-<section class="facilities section" id="facilities">
+<section class="facilities section">
 
 
 <div class="container">
 
 
-<h2 class="section-title">
-Facilities
+<h2 class="section-title reveal">
+Our Facilities
 </h2>
+
 
 
 <div class="facility-grid">
 
 
-<div class="facility-card">
+<div class="facility-card reveal">
 🛏 Luxury Rooms
 </div>
 
 
-<div class="facility-card">
+<div class="facility-card reveal">
 🍽 Restaurant
 </div>
 
 
-<div class="facility-card">
+<div class="facility-card reveal">
 📶 Free WiFi
 </div>
 
 
-<div class="facility-card">
+<div class="facility-card reveal">
 🚗 Parking
 </div>
 
@@ -289,33 +396,32 @@ Facilities
 
 
 
-<!-- Contact -->
 
 
-<section class="contact section" id="contact">
+<!-- REVIEWS -->
+
+
+<section class="reviews section">
 
 
 <div class="container">
 
 
-<h2 class="section-title">
-Contact Us
+<h2 class="section-title reveal">
+Guest Reviews
 </h2>
 
 
-<div class="contact-box">
+<div class="review-box reveal">
+
+
+<h3>
+⭐⭐⭐⭐⭐
+</h3>
 
 
 <p>
-📍 BCA HOTEL
-</p>
-
-<p>
-📞 +91 XXXXX XXXXX
-</p>
-
-<p>
-✉ info@bcahotel.com
+Amazing rooms, great service and wonderful experience.
 </p>
 
 
@@ -331,7 +437,122 @@ Contact Us
 
 
 
+
+
+
+<!-- BOOKING -->
+
+
+<section class="booking section" id="booking">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+Book Your Stay
+</h2>
+
+
+<form class="booking-form reveal">
+
+
+<input type="text" placeholder="Full Name">
+
+
+<input type="tel" placeholder="Phone Number">
+
+
+<label>
+Check In
+</label>
+
+<input type="date">
+
+
+<label>
+Check Out
+</label>
+
+<input type="date">
+
+
+<select>
+
+<option>Select Room</option>
+<option>Deluxe Room</option>
+<option>Luxury Suite</option>
+<option>Family Room</option>
+
+</select>
+
+
+
+<button>
+Confirm Booking
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section class="contact section" id="contact">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+Contact Us
+</h2>
+
+
+<p class="reveal">
+📍 BCA HOTEL
+</p>
+
+
+<p class="reveal">
+📞 +91 XXXXX XXXXX
+</p>
+
+
+<p class="reveal">
+✉ info@bcahotel.com
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
 <footer class="footer">
+
 
 <p>
 © 2026 BCA HOTEL | All Rights Reserved
@@ -339,7 +560,6 @@ Contact Us
 
 
 </footer>
-
 
 
 
