@@ -1,85 +1,68 @@
-// Mobile Menu
+// EmailJS Initialize
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-
-menuBtn.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-});
+emailjs.init("edOO0w7Ejq5L2_kEZ");
 
 
 
+// Booking Form
+
+const bookingForm = document.getElementById("booking-form");
 
 
-// Scroll Reveal Animation
+bookingForm.addEventListener("submit", function(event){
 
-const reveals = document.querySelectorAll(".reveal");
-
-
-function revealOnScroll(){
-
-    for(let i = 0; i < reveals.length; i++){
-
-        let windowHeight = window.innerHeight;
-
-        let elementTop = reveals[i].getBoundingClientRect().top;
-
-        let elementVisible = 100;
+    event.preventDefault();
 
 
-        if(elementTop < windowHeight - elementVisible){
+    emailjs.sendForm(
+        "service_j679egi",
+        "template_gc1qc6p",
+        this
+    )
 
-            reveals[i].classList.add("active");
+    .then(function(){
 
-        }
+        alert("Booking request sent successfully!");
 
-    }
-
-}
-
-
-window.addEventListener("scroll", revealOnScroll);
-
-
-revealOnScroll();
+        bookingForm.reset();
 
 
+    }, function(error){
 
+        alert("Failed to send booking. Please try again.");
 
-
-
-// Close mobile menu after clicking link
-
-const links = document.querySelectorAll(".nav-links a");
-
-
-links.forEach(link => {
-
-    link.addEventListener("click",()=>{
-
-        navLinks.classList.remove("active");
+        console.log(error);
 
     });
 
+
 });
 
 
 
 
 
+// Smooth scroll for navigation
 
-// Booking Button Message
+document.querySelectorAll("a[href^='#']").forEach(link => {
 
-const bookingForm = document.querySelector(".booking-form");
+    link.addEventListener("click", function(e){
+
+        let target = document.querySelector(
+            this.getAttribute("href")
+        );
 
 
-bookingForm.addEventListener("submit",(e)=>{
+        if(target){
 
-    e.preventDefault();
+            e.preventDefault();
 
-    alert("Thank you! Your booking request has been received.");
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
 
 });
