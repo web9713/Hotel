@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+// Mobile Menu
 
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
@@ -12,14 +12,53 @@ menuBtn.addEventListener("click", () => {
 
 
 
-// Close menu after clicking link
-
-const navItems = document.querySelectorAll(".nav-links a");
 
 
-navItems.forEach(link => {
+// Scroll Reveal Animation
 
-    link.addEventListener("click", () => {
+const reveals = document.querySelectorAll(".reveal");
+
+
+function revealOnScroll(){
+
+    for(let i = 0; i < reveals.length; i++){
+
+        let windowHeight = window.innerHeight;
+
+        let elementTop = reveals[i].getBoundingClientRect().top;
+
+        let elementVisible = 100;
+
+
+        if(elementTop < windowHeight - elementVisible){
+
+            reveals[i].classList.add("active");
+
+        }
+
+    }
+
+}
+
+
+window.addEventListener("scroll", revealOnScroll);
+
+
+revealOnScroll();
+
+
+
+
+
+
+// Close mobile menu after clicking link
+
+const links = document.querySelectorAll(".nav-links a");
+
+
+links.forEach(link => {
+
+    link.addEventListener("click",()=>{
 
         navLinks.classList.remove("active");
 
@@ -30,66 +69,17 @@ navItems.forEach(link => {
 
 
 
-// Header background change on scroll
-
-const header = document.querySelector(".header");
 
 
-window.addEventListener("scroll", () => {
+// Booking Button Message
+
+const bookingForm = document.querySelector(".booking-form");
 
 
-    if(window.scrollY > 50){
+bookingForm.addEventListener("submit",(e)=>{
 
-        header.style.background = "#111";
+    e.preventDefault();
 
-    }
-    else{
-
-        header.style.background = "rgba(0,0,0,0.65)";
-
-    }
-
-
-});
-
-
-
-
-// Smooth reveal animation
-
-const sections = document.querySelectorAll(".section");
-
-
-const observer = new IntersectionObserver((entries)=>{
-
-
-    entries.forEach(entry=>{
-
-
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-
-        }
-
-
-    });
-
-
-},{threshold:0.2});
-
-
-
-sections.forEach(section=>{
-
-
-    section.style.opacity="0";
-    section.style.transform="translateY(40px)";
-    section.style.transition="0.8s ease";
-
-
-    observer.observe(section);
-
+    alert("Thank you! Your booking request has been received.");
 
 });
