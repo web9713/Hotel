@@ -10,13 +10,18 @@
 
 <link rel="stylesheet" href="style.css">
 
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
 </head>
 
 
 <body>
 
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 
 <header class="header">
 
@@ -27,7 +32,7 @@ BCA HOTEL
 </div>
 
 
-<ul class="nav-links" id="navLinks">
+<ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -38,11 +43,6 @@ BCA HOTEL
 <li><a href="#contact">Contact</a></li>
 
 </ul>
-
-
-<button class="menu-btn" id="menuBtn">
-☰
-</button>
 
 
 <a href="#booking" class="book-btn">
@@ -66,7 +66,8 @@ Book Now
 <div class="hero-overlay"></div>
 
 
-<div class="hero-content animate">
+<div class="hero-content">
+
 
 <h1>
 Welcome To BCA HOTEL
@@ -74,7 +75,7 @@ Welcome To BCA HOTEL
 
 
 <p>
-Experience luxury, comfort and unforgettable hospitality.
+Luxury Rooms • Premium Dining • Comfortable Stay
 </p>
 
 
@@ -96,28 +97,27 @@ Reserve Your Stay
 
 <!-- ABOUT -->
 
-
-<section class="about section reveal" id="about">
-
+<section class="section about" id="about">
 
 <div class="container">
 
 
-<h2>
+<h2 class="section-title">
 About BCA HOTEL
 </h2>
 
 
 <p>
-BCA HOTEL provides premium rooms, delicious dining,
-modern facilities and excellent hospitality for every guest.
+BCA HOTEL provides a premium hospitality experience
+with comfortable rooms, delicious food and modern facilities.
+Our goal is to make every guest feel special.
 </p>
 
 
 </div>
 
-
 </section>
+
 
 
 
@@ -128,23 +128,22 @@ modern facilities and excellent hospitality for every guest.
 <!-- ROOMS -->
 
 
-<section class="rooms section" id="rooms">
+<section class="section" id="rooms">
 
 
 <div class="container">
 
 
-<h2 class="section-title reveal">
-Our Luxury Rooms
+<h2 class="section-title">
+Luxury Rooms
 </h2>
+
 
 
 <div class="room-container">
 
 
-
-<div class="room-card reveal">
-
+<div class="room-card">
 
 <img src="images/room1.png" alt="Deluxe Room">
 
@@ -155,8 +154,9 @@ Our Luxury Rooms
 Deluxe Room
 </h3>
 
+
 <p>
-Comfortable room with AC, WiFi and modern facilities.
+Elegant room with modern facilities and comfortable space.
 </p>
 
 
@@ -167,16 +167,13 @@ View Details
 
 </div>
 
-
 </div>
 
 
 
 
 
-
-<div class="room-card reveal">
-
+<div class="room-card">
 
 <img src="images/room2.png" alt="Luxury Suite">
 
@@ -187,8 +184,9 @@ View Details
 Luxury Suite
 </h3>
 
+
 <p>
-Premium suite with elegant interior design.
+Premium suite designed for a luxurious experience.
 </p>
 
 
@@ -199,7 +197,6 @@ View Details
 
 </div>
 
-
 </div>
 
 
@@ -207,9 +204,7 @@ View Details
 
 
 
-
-<div class="room-card reveal">
-
+<div class="room-card">
 
 <img src="images/hotel.png" alt="Family Room">
 
@@ -220,8 +215,9 @@ View Details
 Family Room
 </h3>
 
+
 <p>
-Spacious room perfect for family stay.
+Spacious room perfect for family and groups.
 </p>
 
 
@@ -232,9 +228,7 @@ View Details
 
 </div>
 
-
 </div>
-
 
 
 
@@ -242,10 +236,8 @@ View Details
 
 
 </div>
-
 
 </section>
-
 
 
 
@@ -256,31 +248,30 @@ View Details
 <!-- RESTAURANT -->
 
 
-<section class="restaurant section" id="restaurant">
+<section class="section" id="restaurant">
 
 
 <div class="container restaurant-box">
 
 
-<div class="restaurant-image reveal">
+<div class="restaurant-image">
 
 <img src="images/restaurant.png" alt="Restaurant">
 
 </div>
 
 
-
-<div class="restaurant-text reveal">
+<div class="restaurant-text">
 
 
 <h2>
-Fine Dining Experience
+Fine Dining Restaurant
 </h2>
 
 
 <p>
 Enjoy delicious cuisine prepared by expert chefs
-with a premium dining atmosphere.
+in a premium atmosphere.
 </p>
 
 
@@ -306,38 +297,35 @@ Book Table
 <!-- GALLERY -->
 
 
-<section class="gallery section" id="gallery">
+<section class="section" id="gallery">
 
 
 <div class="container">
 
 
-<h2 class="section-title reveal">
+<h2 class="section-title">
 Hotel Gallery
 </h2>
-
 
 
 <div class="gallery-grid">
 
 
-<img class="reveal" src="images/hero.png">
+<img src="images/hero.png">
 
-<img class="reveal" src="images/lobby.png">
+<img src="images/lobby.png">
 
-<img class="reveal" src="images/restaurant.png">
+<img src="images/restaurant.png">
 
-<img class="reveal" src="images/hotel.png">
-
-
-</div>
+<img src="images/hotel.png">
 
 
 </div>
 
+
+</div>
 
 </section>
-
 
 
 
@@ -348,37 +336,36 @@ Hotel Gallery
 <!-- FACILITIES -->
 
 
-<section class="facilities section">
+<section class="section">
 
 
 <div class="container">
 
 
-<h2 class="section-title reveal">
-Our Facilities
+<h2 class="section-title">
+Facilities
 </h2>
-
 
 
 <div class="facility-grid">
 
 
-<div class="facility-card reveal">
+<div class="facility-card">
 🛏 Luxury Rooms
 </div>
 
 
-<div class="facility-card reveal">
+<div class="facility-card">
 🍽 Restaurant
 </div>
 
 
-<div class="facility-card reveal">
+<div class="facility-card">
 📶 Free WiFi
 </div>
 
 
-<div class="facility-card reveal">
+<div class="facility-card">
 🚗 Parking
 </div>
 
@@ -397,100 +384,90 @@ Our Facilities
 
 
 
-
-<!-- REVIEWS -->
-
-
-<section class="reviews section">
-
-
-<div class="container">
-
-
-<h2 class="section-title reveal">
-Guest Reviews
-</h2>
-
-
-<div class="review-box reveal">
-
-
-<h3>
-⭐⭐⭐⭐⭐
-</h3>
-
-
-<p>
-Amazing rooms, great service and wonderful experience.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
 <!-- BOOKING -->
 
 
-<section class="booking section" id="booking">
+<section class="section" id="booking">
 
 
 <div class="container">
 
 
-<h2 class="section-title reveal">
+<h2 class="section-title">
 Book Your Stay
 </h2>
 
 
-<form class="booking-form reveal">
+
+<form id="booking-form" class="booking-form">
 
 
-<input type="text" placeholder="Full Name">
+<input 
+type="text"
+id="name"
+name="name"
+placeholder="Full Name"
+required>
 
 
-<input type="tel" placeholder="Phone Number">
+
+<input 
+type="tel"
+id="phone"
+name="phone"
+placeholder="Mobile Number"
+required>
+
 
 
 <label>
 Check In
 </label>
 
-<input type="date">
+<input 
+type="date"
+id="checkin"
+name="checkin"
+required>
+
 
 
 <label>
 Check Out
 </label>
 
-<input type="date">
+<input 
+type="date"
+id="checkout"
+name="checkout"
+required>
 
 
-<select>
 
-<option>Select Room</option>
+<select id="room" name="room">
+
 <option>Deluxe Room</option>
+
 <option>Luxury Suite</option>
+
 <option>Family Room</option>
 
 </select>
 
 
 
-<button>
+<textarea
+id="message"
+name="message"
+placeholder="Special Request">
+</textarea>
+
+
+
+<button type="submit">
 Confirm Booking
 </button>
+
 
 
 </form>
@@ -498,9 +475,7 @@ Confirm Booking
 
 </div>
 
-
 </section>
-
 
 
 
@@ -511,28 +486,28 @@ Confirm Booking
 <!-- CONTACT -->
 
 
-<section class="contact section" id="contact">
+<section class="section contact" id="contact">
 
 
 <div class="container">
 
 
-<h2 class="section-title reveal">
+<h2 class="section-title">
 Contact Us
 </h2>
 
 
-<p class="reveal">
+<p>
 📍 BCA HOTEL
 </p>
 
 
-<p class="reveal">
+<p>
 📞 +91 XXXXX XXXXX
 </p>
 
 
-<p class="reveal">
+<p>
 ✉ info@bcahotel.com
 </p>
 
@@ -548,16 +523,11 @@ Contact Us
 
 
 
-<!-- FOOTER -->
-
-
 <footer class="footer">
-
 
 <p>
 © 2026 BCA HOTEL | All Rights Reserved
 </p>
-
 
 </footer>
 
