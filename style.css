@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 html{
@@ -15,12 +15,12 @@ body{
 }
 
 
-/* Header */
+/* HEADER */
 
 .header{
     position:fixed;
-    top:0;
     width:100%;
+    top:0;
     z-index:1000;
     background:rgba(0,0,0,0.75);
 }
@@ -29,30 +29,37 @@ body{
 .navbar{
     max-width:1200px;
     margin:auto;
+    padding:20px 30px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:18px 30px;
 }
 
 
 .logo{
     color:#d4af37;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
+    letter-spacing:2px;
 }
 
 
 .nav-links{
     display:flex;
-    list-style:none;
     gap:25px;
+    list-style:none;
 }
 
 
 .nav-links a{
     color:white;
     text-decoration:none;
+    font-size:16px;
+}
+
+
+.nav-links a:hover{
+    color:#d4af37;
 }
 
 
@@ -60,33 +67,34 @@ body{
 .primary-btn{
 
     background:#d4af37;
-    color:#000;
+    color:#111;
     padding:12px 25px;
-    border-radius:25px;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
+    transition:.3s;
 
 }
 
 
-.menu-btn{
-    display:none;
-    color:white;
-    background:none;
-    border:none;
-    font-size:25px;
+.book-btn:hover,
+.primary-btn:hover{
+
+    transform:scale(1.05);
+
 }
 
 
 
 
-/* Hero */
+
+/* HERO */
 
 .hero{
 
 height:100vh;
 
-background-image:url("images/hero.png");
+background:url("images/hero.png");
 
 background-size:cover;
 
@@ -107,12 +115,11 @@ position:relative;
 
 position:absolute;
 
-top:0;
-left:0;
 width:100%;
+
 height:100%;
 
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,.55);
 
 }
 
@@ -130,7 +137,7 @@ color:white;
 
 .hero-content h1{
 
-font-size:55px;
+font-size:60px;
 
 margin-bottom:20px;
 
@@ -148,12 +155,12 @@ margin-bottom:30px;
 
 
 
-/* Common */
 
+/* COMMON */
 
 .section{
 
-padding:80px 20px;
+padding:90px 20px;
 
 }
 
@@ -171,9 +178,9 @@ margin:auto;
 
 text-align:center;
 
-font-size:36px;
+font-size:38px;
 
-margin-bottom:40px;
+margin-bottom:50px;
 
 }
 
@@ -181,8 +188,7 @@ margin-bottom:40px;
 
 
 
-/* About */
-
+/* ABOUT */
 
 .about{
 
@@ -199,7 +205,7 @@ margin:auto;
 
 font-size:18px;
 
-line-height:1.7;
+line-height:1.8;
 
 }
 
@@ -207,8 +213,7 @@ line-height:1.7;
 
 
 
-/* Rooms */
-
+/* ROOMS */
 
 .room-container{
 
@@ -221,7 +226,6 @@ gap:30px;
 }
 
 
-
 .room-card{
 
 background:white;
@@ -230,7 +234,16 @@ border-radius:15px;
 
 overflow:hidden;
 
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+
+.room-card:hover{
+
+transform:translateY(-10px);
 
 }
 
@@ -250,10 +263,9 @@ object-fit:cover;
 
 .room-content{
 
-padding:20px;
+padding:25px;
 
 }
-
 
 
 .room-content h3{
@@ -263,7 +275,6 @@ color:#b8860b;
 margin-bottom:10px;
 
 }
-
 
 
 .room-btn{
@@ -276,7 +287,7 @@ border:none;
 
 padding:10px 20px;
 
-border-radius:20px;
+border-radius:25px;
 
 margin-top:15px;
 
@@ -286,7 +297,7 @@ margin-top:15px;
 
 
 
-/* Restaurant */
+/* RESTAURANT */
 
 
 .restaurant-box{
@@ -300,7 +311,8 @@ gap:40px;
 }
 
 
-.restaurant-image{
+.restaurant-image,
+.restaurant-text{
 
 width:50%;
 
@@ -320,10 +332,11 @@ border-radius:20px;
 }
 
 
+.restaurant-text h2{
 
-.restaurant-text{
+font-size:35px;
 
-width:50%;
+margin-bottom:20px;
 
 }
 
@@ -331,7 +344,7 @@ width:50%;
 
 
 
-/* Gallery */
+/* GALLERY */
 
 
 .gallery-grid{
@@ -355,13 +368,22 @@ object-fit:cover;
 
 border-radius:15px;
 
+transition:.4s;
+
+}
+
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
 }
 
 
 
 
 
-/* Facilities */
+/* FACILITIES */
 
 
 .facility-grid{
@@ -375,7 +397,6 @@ gap:20px;
 }
 
 
-
 .facility-card{
 
 background:#f5f5f5;
@@ -386,24 +407,7 @@ text-align:center;
 
 border-radius:15px;
 
-}
-
-
-
-
-
-/* Reviews */
-
-
-.review-box{
-
-background:#f5f5f5;
-
-padding:40px;
-
-text-align:center;
-
-border-radius:20px;
+font-size:18px;
 
 }
 
@@ -411,7 +415,7 @@ border-radius:20px;
 
 
 
-/* Booking */
+/* BOOKING FORM */
 
 
 .booking-form{
@@ -429,9 +433,10 @@ gap:15px;
 }
 
 
-
 .booking-form input,
-.booking-form select{
+.booking-form select,
+.booking-form textarea{
+
 
 padding:15px;
 
@@ -439,19 +444,52 @@ border:1px solid #ccc;
 
 border-radius:8px;
 
+font-size:16px;
+
 }
 
+
+.booking-form textarea{
+
+height:100px;
+
+resize:none;
+
+}
 
 
 .booking-form button{
 
 padding:15px;
 
-border:none;
-
 background:#d4af37;
 
-border-radius:25px;
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* CONTACT */
+
+.contact{
+
+text-align:center;
+
+}
+
+
+.contact p{
+
+margin:10px;
 
 font-size:18px;
 
@@ -461,21 +499,7 @@ font-size:18px;
 
 
 
-/* Contact */
-
-
-.contact{
-
-text-align:center;
-
-}
-
-
-
-
-
-/* Footer */
-
+/* FOOTER */
 
 .footer{
 
@@ -493,23 +517,16 @@ padding:25px;
 
 
 
-/* Animation */
-
-
-.reveal{
-
-opacity:1;
-
-transform:none;
-
-}
-
-
-
-/* Mobile */
-
+/* MOBILE */
 
 @media(max-width:768px){
+
+
+.navbar{
+
+padding:15px;
+
+}
 
 
 .nav-links{
@@ -519,9 +536,30 @@ display:none;
 }
 
 
-.menu-btn{
+.logo{
 
-display:block;
+font-size:24px;
+
+}
+
+
+.book-btn{
+
+display:none;
+
+}
+
+
+.hero-content h1{
+
+font-size:35px;
+
+}
+
+
+.hero-content p{
+
+font-size:18px;
 
 }
 
@@ -558,13 +596,6 @@ grid-template-columns:repeat(2,1fr);
 .facility-grid{
 
 grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.hero-content h1{
-
-font-size:35px;
 
 }
 
