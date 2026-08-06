@@ -362,5 +362,4 @@ function showFormMessage(msgBox, type, text) {
   msgBox.textContent = text;
   msgBox.style.display = 'block';
   msgBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                  }
-                       
+}
