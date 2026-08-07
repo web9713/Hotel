@@ -1,21 +1,20 @@
 /* =========================================================
-   BCA HOTEL — Master Stylesheet
-   Luxury Black + Gold + Ivory design system
+   BCA HOTEL — Master Stylesheet (Royal Deep Blue & Gold Theme)
    ========================================================= */
 
 /* ---------- Design Tokens ---------- */
 :root{
-  --black:        #0a0a0a;
-  --charcoal:      #141311;
-  --charcoal-2:    #1c1a17;
-  --ivory:         #f4efe4;
-  --ivory-dim:     #cfc8b8;
-  --stone:         #8b8578;
-  --gold:          #c9a961;
-  --gold-light:    #e8d9ae;
-  --gold-deep:     #9c7f3f;
-  --line:          rgba(201,169,97,0.22);
-  --overlay:       rgba(10,10,10,0.62);
+  --black:        #060913; /* Rich Deep Midnight Blue Base */
+  --charcoal:      #0f172a; /* Slate Blue Card Background */
+  --charcoal-2:    #1e293b; /* Lighter Blue Input Background */
+  --ivory:         #f8fafc;
+  --ivory-dim:     #cbd5e1;
+  --stone:         #94a3b8;
+  --gold:          #d4af37;
+  --gold-light:    #f3e5ab;
+  --gold-deep:     #aa8c2c;
+  --line:          rgba(212,175,55,0.22);
+  --overlay:       rgba(6,9,19,0.7);
 
   --font-display: 'Cormorant Garamond', serif;
   --font-body:    'Jost', sans-serif;
@@ -159,7 +158,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-bottom: 1px solid transparent;
 }
 .navbar.scrolled{
-  background: rgba(10,10,10,0.92);
+  background: rgba(6,9,19,0.92);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   border-color: var(--line);
@@ -212,7 +211,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   animation: kenburns 12s ease-in-out infinite;
 }
 .hero-slide.active{ opacity:1; z-index:2; }
-.hero-slide::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.35) 45%, rgba(10,10,10,.85) 100%); }
+.hero-slide::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(6,9,19,.6) 0%, rgba(6,9,19,.4) 45%, rgba(6,9,19,.9) 100%); }
 @keyframes kenburns{ 0%{ transform: scale(1.0);} 50%{ transform: scale(1.08);} 100%{ transform: scale(1.0);} }
 
 .hero-content{ position:relative; z-index:3; padding: 0 1.5rem; max-width:900px; }
@@ -245,7 +244,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative; min-height:56vh; display:flex; align-items:flex-end;
   background-size:cover; background-position:center; padding-bottom: 4rem;
 }
-.page-hero::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(10,10,10,.4), rgba(10,10,10,.92)); }
+.page-hero::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(6,9,19,.45), rgba(6,9,19,.92)); }
 .page-hero .container{ position:relative; z-index:2; }
 .page-hero .crumbs{ font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color: var(--stone); margin-bottom:.8rem; }
 .page-hero .crumbs a{ color: var(--gold); }
@@ -292,7 +291,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .room-media{ position:relative; overflow:hidden; aspect-ratio: 4/3; }
 .room-media img{ width:100%; height:100%; object-fit:cover; transition: transform .8s var(--ease); }
 .room-card:hover .room-media img{ transform: scale(1.1); }
-.room-price{ position:absolute; top:1rem; right:1rem; background: rgba(10,10,10,.75); border:1px solid var(--gold); color:var(--gold); padding:.5rem 1rem; font-size:.85rem; letter-spacing:.05em; backdrop-filter: blur(4px); }
+.room-price{ position:absolute; top:1rem; right:1rem; background: rgba(6,9,19,.85); border:1px solid var(--gold); color:var(--gold); padding:.5rem 1rem; font-size:.85rem; letter-spacing:.05em; backdrop-filter: blur(4px); }
 .room-price span{ font-size:.62rem; color: var(--ivory-dim); display:block; text-transform:uppercase; letter-spacing:.14em; }
 .room-body{ padding: 1.6rem 1.6rem 1.8rem; }
 .room-body h3{ font-size:1.5rem; margin-bottom:.5rem; }
@@ -305,7 +304,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- Facilities ---------- */
 .fac-grid{ grid-template-columns: repeat(4,1fr); }
-.fac-card{ text-align:center; padding: 2.4rem 1.2rem; border:1px solid var(--line); transition: border-color .4s, transform .4s; }
+.fac-card{ text-align:center; padding: 2.4rem 1.2rem; border:1px solid var(--line); transition: border-color .4s, transform .4s; background: var(--charcoal); }
 .fac-card:hover{ border-color: var(--gold); transform: translateY(-6px); }
 .fac-icon{ width:52px; height:52px; margin:0 auto 1.1rem; color: var(--gold); }
 .fac-icon svg{ width:100%; height:100%; stroke: var(--gold); fill:none; stroke-width:1.3; transition: transform .5s var(--ease); }
@@ -325,7 +324,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .testi-nav button{ width:40px; height:40px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; transition: border-color .3s, color .3s; }
 .testi-nav button:hover{ border-color: var(--gold); color:var(--gold); }
 
-/* ---------- Review Cards (Reviews page) ---------- */
+/* ---------- Review Cards ---------- */
 .review-grid{ grid-template-columns: repeat(3,1fr); }
 .review-card{ background: var(--charcoal); border:1px solid var(--line); padding: 1.8rem; }
 .review-top{ display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
@@ -339,7 +338,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- Offers ---------- */
 .offers-grid{ grid-template-columns: repeat(3,1fr); }
 .offer-card{ position:relative; overflow:hidden; min-height:420px; display:flex; align-items:flex-end; padding:2rem; background-size:cover; background-position:center; }
-.offer-card::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 30%, rgba(10,10,10,.94)); transition: background .5s; }
+.offer-card::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 30%, rgba(6,9,19,.94)); transition: background .5s; }
 .offer-tag{ position:absolute; top:1.4rem; left:1.4rem; background: var(--gold); color: var(--black); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; padding:.4rem .9rem; z-index:2; }
 .offer-body{ position:relative; z-index:2; }
 .offer-body h3{ font-size:1.6rem; margin-bottom:.5rem; }
@@ -351,7 +350,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .gallery-filters{ display:flex; gap:.9rem; flex-wrap:wrap; justify-content:center; margin-bottom: 2.5rem; }
 .gallery-filters button{
   font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; padding:.7rem 1.4rem;
-  border:1px solid var(--line); color: var(--ivory-dim); transition: all .3s;
+  border:1px solid var(--line); color: var(--ivory-dim); transition: all .3s; background: var(--charcoal);
 }
 .gallery-filters button.active, .gallery-filters button:hover{ border-color: var(--gold); color: var(--gold); }
 .gallery-grid{ grid-template-columns: repeat(4,1fr); grid-auto-rows: 220px; }
@@ -359,13 +358,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .gallery-item:nth-child(5n+1){ grid-row: span 2; }
 .gallery-item img{ width:100%; height:100%; object-fit:cover; transition: transform .6s var(--ease); }
 .gallery-item:hover img{ transform: scale(1.08); }
-.gallery-item::after{ content:"⊕"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color: var(--gold); background: rgba(10,10,10,0); opacity:0; transition: all .35s; }
-.gallery-item:hover::after{ background: rgba(10,10,10,.45); opacity:1; }
+.gallery-item::after{ content:"⊕"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color: var(--gold); background: rgba(6,9,19,0); opacity:0; transition: all .35s; }
+.gallery-item:hover::after{ background: rgba(6,9,19,.6); opacity:1; }
 .gallery-item.hide{ display:none; }
 
-.lightbox{ position:fixed; inset:0; background: rgba(10,10,10,.96); z-index:2000; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition: opacity .4s, visibility .4s; }
+.lightbox{ position:fixed; inset:0; background: rgba(6,9,19,.96); z-index:2000; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition: opacity .4s, visibility .4s; }
 .lightbox.open{ opacity:1; visibility:visible; }
-.lightbox img{ max-width:86vw; max-height:82vh; border:1px solid var(--line); }
-
-/* ---------- Lightbox Controls ---------- */
-.lightbox-close{ position:absolute;
+.lightbox img{ max-width:86vw; max-height:82vh; border:1p
