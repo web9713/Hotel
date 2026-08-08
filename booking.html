@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Room | BCA Hotel — Reserve Your Stay</title>
-<meta name="description" content="Book your luxury stay at BCA Hotel. Choose your room type, dates and preferences — our team confirms every reservation personally.">
+<title>Online Reservation | BCA Hotel — Luxury Booking</title>
+<meta name="description" content="Reserve your stay at BCA Hotel. Experience unmatched 5-star luxury with instant confirmation.">
 <link rel="canonical" href="https://bcahotel.example.com/booking.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Book a Room | BCA Hotel">
-<meta property="og:description" content="Reserve your luxury stay at BCA Hotel in minutes.">
+<meta property="og:title" content="Online Reservation | BCA Hotel">
+<meta property="og:description" content="Secure your luxury stay at BCA Hotel with instant confirmation.">
 <meta property="og:image" content="images/hero.jpg">
 <meta property="og:url" content="https://bcahotel.example.com/booking.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="css/style.css">
-</head><body>
+</head>
+<body>
 <div id="preloader"><div class="preloader-mark"><div class="glyph">BCA</div><div class="preloader-bar"></div></div></div>
 
 <header class="navbar" id="navbar">
@@ -39,7 +40,7 @@
       <a href="faq.html">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a href="booking.html" class="btn btn-ghost">Book Now</a>
+      <a href="booking.html" class="btn btn-ghost active">Book Now</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
@@ -57,106 +58,156 @@
   <a href="faq.html">FAQ</a>
   <a href="booking.html" class="btn btn-solid">Book Now</a>
 </div>
-<section class="page-hero" style="background-image:url('images/room6.jpg')">
+
+<section class="page-hero" style="background-image:url('images/room1.jpg')">
   <div class="container">
     <p class="crumbs"><a href="index.html">Home</a> / Booking</p>
-    <h1>Reserve Your Stay</h1>
+    <h1>Secure Reservation</h1>
   </div>
 </section>
 
+<!-- Luxury Redesigned Booking Section -->
 <section class="section">
-  <div class="container grid booking-wrap">
-    <div class="reveal">
-      <p class="eyebrow">Booking Form</p>
-      <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.6rem;">Tell Us About Your Stay</h2>
-      <p style="color:var(--stone);margin-bottom:2rem;">Fill in the details below and our reservations team will confirm your booking by email within 24 hours.</p>
+  <div class="container">
+    <div class="booking-luxury-layout">
+      
+      <!-- Left Column: Perks & Info -->
+      <div class="booking-perks-col reveal">
+        <p class="eyebrow">VIP Privileges</p>
+        <h2>The Direct Booking Advantage</h2>
+        <p>Reserve directly with BCA Hotel and enjoy exclusive privileges curated to elevate your royal stay.</p>
+        
+        <ul class="booking-perks-list">
+          <li>
+            <i class="fa-solid fa-gem"></i>
+            <div>
+              <h4>Best Rate Guarantee</h4>
+              <p>Found a lower rate? We’ll match it and upgrade your experience.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-utensils"></i>
+            <div>
+              <h4>Complimentary Breakfast</h4>
+              <p>Daily gourmet multi-cuisine breakfast included for all guests.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Flexible Checkout</h4>
+              <p>Enjoy complimentary late checkout until 4:00 PM (subject to availability).</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-car"></i>
+            <div>
+              <h4>Airport Chauffeur Transfer</h4>
+              <p>Complimentary luxury sedan airport pickup for suites.</p>
+            </div>
+          </li>
+        </ul>
 
-      <form id="bookingForm" novalidate>
-        <div class="grid form-grid">
-          <div class="field">
-            <label for="b-name">Full Name</label>
-            <input type="text" id="b-name" name="full_name" required>
-            <span class="error-text"></span>
-          </div>
-          <div class="field">
-            <label for="b-phone">Mobile Number</label>
-            <input type="tel" id="b-phone" name="phone" pattern="[0-9+\-\s]{7,15}" required>
-            <span class="error-text">Enter a valid phone number.</span>
-          </div>
-          <div class="field full">
-            <label for="b-email">Email Address</label>
-            <input type="email" id="b-email" name="email" required>
-            <span class="error-text">Enter a valid email address.</span>
-          </div>
-          <div class="field">
-            <label for="b-checkin">Check-in Date</label>
-            <input type="date" id="b-checkin" name="checkin" required>
-            <span class="error-text"></span>
-          </div>
-          <div class="field">
-            <label for="b-checkout">Check-out Date</label>
-            <input type="date" id="b-checkout" name="checkout" required>
-            <span class="error-text"></span>
-          </div>
-          <div class="field">
-            <label for="b-adults">Adults</label>
-            <select id="b-adults" name="adults" required>
-              <option value="1">1 Adult</option>
-              <option value="2" selected>2 Adults</option>
-              <option value="3">3 Adults</option>
-              <option value="4">4 Adults</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="b-children">Children</label>
-            <select id="b-children" name="children">
-              <option value="0" selected>0 Children</option>
-              <option value="1">1 Child</option>
-              <option value="2">2 Children</option>
-              <option value="3">3 Children</option>
-            </select>
-          </div>
-          <div class="field full">
-            <label for="b-room">Room Type</label>
-            <select id="b-room" name="room_type" required>
-              <option value="">Select a room type</option>
-              <option value="Deluxe Garden Room">Deluxe Garden Room — $180/night</option>
-              <option value="Executive City Room">Executive City Room — $240/night</option>
-              <option value="Luxury Suite">Luxury Suite — $340/night</option>
-              <option value="Ocean View Room">Ocean View Room — $260/night</option>
-              <option value="Royal Family Suite">Royal Family Suite — $420/night</option>
-              <option value="Presidential Suite">Presidential Suite — $680/night</option>
-            </select>
-            <span class="error-text"></span>
-          </div>
-          <div class="field full">
-            <label for="b-request">Special Request</label>
-            <textarea id="b-request" name="special_request" placeholder="Airport pickup, early check-in, dietary needs..."></textarea>
-          </div>
+        <div class="booking-support-box">
+          <h4>Need Assistance?</h4>
+          <p>Our concierge desk is available 24/7 to handle custom requests.</p>
+          <a href="tel:+15552349080"><i class="fa-solid fa-phone"></i> +1 (555) 234-9080</a>
         </div>
-        <button type="submit" class="btn btn-solid btn-block" data-label="Book Now">Book Now</button>
-        <p class="form-note">By submitting, you agree to our booking terms. No payment is required now — our team will confirm availability first.</p>
-        <div class="form-msg" id="bookingMsg"></div>
-      </form>
-    </div>
+      </div>
 
-    <aside class="booking-side reveal reveal-delay-2">
-      <h3>Why Book Direct</h3>
-      <ul>
-        <li>Best rate guaranteed, no hidden fees</li>
-        <li>Complimentary breakfast for two</li>
-        <li>Flexible cancellation up to 48 hours</li>
-        <li>Late checkout, subject to availability</li>
-        <li>Personal reservations concierge</li>
-      </ul>
-      <div class="divider"></div>
-      <h3>Need Help?</h3>
-      <p style="font-size:.9rem;color:var(--stone);margin-bottom:1rem;">Our concierge team is available 24/7 to assist with your reservation.</p>
-      <p style="font-size:.9rem;"><i class="fa-solid fa-phone" style="color:var(--gold);"></i>&nbsp; +1 (555) 234-9080</p>
-      <p style="font-size:.9rem;"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i>&nbsp; reservations@bcahotel.example.com</p>
-    </aside>
+      <!-- Right Column: Interactive Luxury Form -->
+      <div class="booking-form-col reveal reveal-delay-2">
+        <div class="booking-wrap" style="max-width:100%; margin:0;">
+          <div class="booking-form-header">
+            <span class="eyebrow" style="margin-bottom:.4rem;">Step 1 of 1</span>
+            <h3 style="font-family:var(--font-display);font-size:2rem;color:var(--ivory);">Select Your Stay</h3>
+            <p style="font-size:.9rem;color:var(--stone);margin-bottom:2rem;">Fill in your details below for instant reservation confirmation.</p>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <div class="grid form-grid">
+              
+              <div class="field full">
+                <label for="b-room">Select Accommodation Category *</label>
+                <select id="b-room" name="room_type" required>
+                  <option value="" disabled selected>Choose a room or suite...</option>
+                  <option value="Deluxe Garden Room ($180/night)">Deluxe Garden Room — $180 / night</option>
+                  <option value="Executive City Room ($240/night)">Executive City Room — $240 / night</option>
+                  <option value="Luxury Suite ($340/night)">Luxury Suite — $340 / night</option>
+                  <option value="Ocean View Room ($260/night)">Ocean View Room — $260 / night</option>
+                  <option value="Royal Family Suite ($420/night)">Royal Family Suite — $420 / night</option>
+                  <option value="Presidential Suite ($680/night)">Presidential Suite — $680 / night</option>
+                </select>
+                <span class="error-text">Please select a room category.</span>
+              </div>
+
+              <div class="field">
+                <label for="b-checkin">Check-in Date *</label>
+                <input type="date" id="b-checkin" name="checkin" required>
+                <span class="error-text">Select check-in date.</span>
+              </div>
+
+              <div class="field">
+                <label for="b-checkout">Check-out Date *</label>
+                <input type="date" id="b-checkout" name="checkout" required>
+                <span class="error-text">Select check-out date.</span>
+              </div>
+
+              <div class="field">
+                <label for="b-adults">Adults *</label>
+                <select id="b-adults" name="adults" required>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="b-children">Children</label>
+                <select id="b-children" name="children">
+                  <option value="0" selected>0 Children</option>
+                  <option value="1">1 Child</option>
+                  <option value="2">2 Children</option>
+                  <option value="3">3 Children</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="b-name">Full Name *</label>
+                <input type="text" id="b-name" name="full_name" placeholder="e.g. Alexander Wright" required>
+                <span class="error-text">Full name is required.</span>
+              </div>
+
+              <div class="field">
+                <label for="b-phone">Mobile Number *</label>
+                <input type="tel" id="b-phone" name="phone" placeholder="e.g. +1 555 019 2834" required>
+                <span class="error-text">Enter a valid phone number.</span>
+              </div>
+
+              <div class="field full">
+                <label for="b-email">Email Address *</label>
+                <input type="email" id="b-email" name="email" placeholder="e.g. alexander@example.com" required>
+                <span class="error-text">Enter a valid email address.</span>
+              </div>
+
+              <div class="field full">
+                <label for="b-requests">Special Requests / Preferences</label>
+                <textarea id="b-requests" name="special_requests" rows="3" placeholder="Dietary requirements, high floor preference, airport pickup details..."></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-solid btn-block" data-label="Confirm &amp; Reserve Now" style="margin-top:2rem;">Confirm &amp; Reserve Now</button>
+            <div class="form-msg" id="bookingMsg"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+
 <footer>
   <div class="container">
     <div class="grid footer-grid">
@@ -210,7 +261,6 @@
 </div>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<!-- EmailJS SDK: required for booking form submissions -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 </body>
